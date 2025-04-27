@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  <style>
+    /* Import fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    body {
+        font-family: 'Handlee', cursive;
+        background: linear-gradient(to right, #e0eafc, #cfdef3);
+        margin: 0;
+        padding: 20px;
+        font-size: 1.2rem; /* Bigger base font */
+    }
+    header {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 3.5rem; /* Slightly bigger header */
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .section {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 45%;
+        margin-bottom: 30px;
+        padding: 25px; /* Little more padding */
+    }
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 2.2rem; /* Bigger section titles */
+        color: #444;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 5px;
+    }
+    ul, table {
+        font-family: 'Handlee', cursive;
+        margin-top: 10px;
+        font-size: 1.4rem; /* Slightly bigger list/table text */
+        color: #555;
+        text-decoration: none;
+    }
+    footer {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        font-size: 1.4rem; /* Bigger footer */
+        margin-top: 50px;
+        color: #777;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: #f9f9f9;
+    }
+    th, td {
+        padding: 12px; /* Bigger cells */
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+    th {
+        background: #e0e0e0;
+        font-size: 1.3rem;
+    }
+    /* For beautiful math */
+    .katex-display {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .katex {
+        font-size: 1.6em; /* Bigger beautiful math */
+    }
+    .special{
+     width: 1 px;
+     height: 250px;
+     position: absolute;
+     left: 80px;
+    }
+
+    h1{
+        text-decoration: underline;
+    }
+b{
+    text-decoration: underline  ;
+    list-style: none;
+}
+li {
+    list-style-type: disc;
+    text-decoration: none;
+    color: black;
+}
+.no1{
+    list-style: none;
+}
+.no2{
+    list-style: none;
+}
+
+
+.no3{
+    list-style: none;
+}
+
+.no4{
+    list-style: none;
+}
+
+.no5{
+    list-style: none;
+}
+
+.no6{
+    list-style: none;
+}
+.no7{
+    list-style: none;
+}
+.no8{
+    list-style: none;
+}
+.no9{
+    list-style: none;
+}
+.no10{
+    list-style: none;
+}
+.no11{
+    list-style: none;
+}
+#left {
+    transition: all 0.5s ease;
+}
+
+#right {
+    transition: all 0.5s ease;
+}
+
+.container.fullscreen #left {
+    display: none;
+}
+
+.container.fullscreen #right {
+    width: 100%;
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+    <header style="text-align: center; font-size: 36px; color: #FF6347; font-family: 'Dancing Script', cursive;">
+        🌟 To My Brilliant Students: You Make Me Proud Every Day! 🌟
+    </header>
+    
+
+<div class="container">
+    <div class="section" id="left">
+            <h2>🧮 Mathematics</h2>
+            <li class="no1"><b class>Important Derivative Formulas:</b>
+                <ul>
+                    <li> \[
+                    \frac{d}{dx}(x^n) = nx^{n-1}
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(e^x) = e^x
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(a^x) = a^x \ln a
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\ln x) = \frac{1}{x}
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\sin x) = \cos x
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\cos x) = -\sin x
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\tan x) = \sec^2 x
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\cot x) = -cosec^2 x
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\sec x) = \sec x \tan x
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(cosec x) = -cosec x \cot x
+                    \] </li>
+                </ul>
+            </li>
+
+            <li class="no2"><b>Important Derivatives of Inverse Functions:</b>
+                <ul>
+                    <li> \[
+                    \frac{d}{dx}(\sin^{-1}x) = \frac{1}{\sqrt{1-x^2}}
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\cos^{-1}x) = -\frac{1}{\sqrt{1-x^2}}
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\tan^{-1}x) = \frac{1}{1+x^2}
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\cot^{-1}x) = -\frac{1}{1+x^2}
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(\sec^{-1}x) = \frac{1}{|x|\sqrt{x^2-1}}
+                    \] </li>
+                    <li> \[
+                    \frac{d}{dx}(cose  c^{-1}x) = -\frac{1}{|x|\sqrt{x^2-1}}
+                    \] </li>
+                </ul>
+                <li class="no3"><b>Standard Trigonometric Formulas:</b>
+                    <ul>
+                        <li> \[
+                        \sin 2x = 2\sin x \cos x
+                        \] </li>
+                        <li> \[
+                        \cos 2x = \cos^2 x - \sin^2 x
+                        \] </li>
+                        <li> \[
+                        \tan 2x = \frac{2\tan x}{1 - \tan^2 x}
+                        \] </li>
+                        <li> \[
+                        \sin x = 2\sin\left( \frac{x}{2} \right)\cos\left( \frac{x}{2} \right)
+                        \] </li>
+                        <li> \[
+                        \cos x = \cos^2\left( \frac{x}{2} \right) - \sin^2\left( \frac{x}{2} \right)
+                        \] </li>
+                        <li> \[
+                        \sin^2 x + \cos^2 x = 1
+                        \] </li>
+                    </ul>
+                </li>
+                
+<li class="no4"><b>Standard Hyperbolic Formulas:</b>
+    <ul>
+        <li> \[
+        \sinh 2x = 2\sinh x \cosh x
+        \] </li>
+        <li> \[
+        \cosh 2x = \cosh^2 x + \sinh^2 x
+        \] </li>
+        <li> \[
+        \sinh x = 2\sinh\left( \frac{x}{2} \right)\cosh\left( \frac{x}{2} \right)
+        \] </li>
+        <li> \[
+        \cosh x = \cosh^2\left( \frac{x}{2} \right) + \sinh^2\left( \frac{x}{2} \right)
+        \] </li>
+        <li> \[
+        \cosh^2 x - \sinh^2 x = 1
+        \] </li>
+    </ul>
+</li>
+<li class="no5"><b>Hyperbolic Functions:</b>
+    <ul>
+        <li> \[
+        \int \sinh x \, dx = \cosh x + C
+        \] </li>
+        <li> \[
+        \int \cosh x \, dx = \sinh x + C
+        \] </li>
+        <li> \[
+        \int \tanh x \, dx = \ln|\cosh x| + C
+        \] </li>
+        <li> \[
+        \int \text{sech}^2 x \, dx = \tanh x + C
+        \] </li>
+        <li> \[
+        \int \text{cosech}^2 x \, dx = -\coth x + C
+        \] </li>
+        <li> \[
+            \int \cot x \, dx = \ln|\sin x| + C
+            \] </li>
+            </ul>
+<li class="no6"><b>Important Derivatives of Inverse Hyperbolic Functions:</b>
+    <ul>
+        <li> \[
+        \frac{d}{dx}(\sinh^{-1} x) = \frac{1}{\sqrt{1+x^2}}
+        \] </li>
+        <li> \[
+        \frac{d}{dx}(\cosh^{-1} x) = \frac{1}{\sqrt{x^2-1}}
+        \quad (x > 1)
+        \] </li>
+        <li> \[
+        \frac{d}{dx}(\tanh^{-1} x) = \frac{1}{1-x^2}
+        \quad (|x| < 1)
+        \] </li>
+        <li> \[
+        \frac{d}{dx}(\coth^{-1} x) = \frac{1}{1-x^2}
+        \quad (|x| > 1)
+        \] </li>
+        <li> \[
+        \frac{d}{dx}(\text{sech}^{-1} x) = \frac{-1}{x\sqrt{1-x^2}}
+        \quad (0 < x \leq 1)
+        \] </li>
+        <li> \[
+        \frac{d}{dx}(\text{cosech}^{-1} x) = \frac{-1}{|x|\sqrt{1+x^2}}
+        \quad (x \neq 0)
+        \] </li>
+    </ul>
+</li>
+
+
+            </li>
+            <li class="no7"><b>Standard Integration Formulas:</b>
+                <ul>
+                    <li> \[
+                    \int \frac{dx}{a^2 + x^2} = \frac{1}{a} \tan^{-1}\left( \frac{x}{a} \right) + C
+                    \] </li>
+                    <li> \[
+                    \int \frac{dx}{a^2 - x^2} = \frac{1}{2a} \ln\left| \frac{a+x}{a-x} \right| + C
+                    \] </li>
+                    <li> \[
+                    \int \frac{dx}{x^2 - a^2} = \frac{1}{2a} \ln\left| \frac{x-a}{x+a} \right| + C
+                    \] </li>
+                </ul>
+            </li>
+            <li class="no8"><b>Standard Integration Formulas (With Square Root):</b>
+                <ul>
+                    <li> \[
+                    \int \frac{dx}{\sqrt{a^2 + x^2}} = \ln\left| x + \sqrt{a^2 + x^2} \right| + C
+                    \] </li>
+                    <li> \[
+                    \int \frac{dx}{\sqrt{a^2 - x^2}} = \sin^{-1}\left( \frac{x}{a} \right) + C
+                    \] </li>
+                    <li> \[
+                    \int \frac{dx}{\sqrt{x^2 - a^2}} = \ln\left| x + \sqrt{x^2 - a^2} \right| + C
+                    \] </li>
+                </ul>
+            </li>
+
+
+                        
+        
+                <li class="no9"><b>Important Integration Formulas:</b>
+                    <ul>
+                        <li> \[
+                        \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)
+                        \] </li>
+                        <li> \[
+                        \int e^x \, dx = e^x + C
+                        \] </li>
+                        <li> \[
+                        \int a^x \, dx = \frac{a^x}{\ln a} + C \quad (a>0, a\neq1)
+                        \] </li>
+                        <li> \[
+                        \int \frac{1}{x} \, dx = \ln|x| + C
+                        \] </li>
+                        <li> \[
+                        \int \sin x \, dx = -\cos x + C
+                        \] </li>
+                        <li> \[
+                        \int \cos x \, dx = \sin x + C
+                        \] </li>
+                        <li> \[
+                        \int \sec^2 x \, dx = \tan x + C
+                        \] </li>
+                        <li> \[
+                        \int \text{cosec}^2 x \, dx = -\cot x + C
+                        \] </li>
+                        <li> \[
+                        \int \sec x \tan x \, dx = \sec x + C
+                        \] </li>
+                        <li> \[
+                        \int \text{cosec} x \cot x \, dx = -\text{cosec} x + C
+                        \] </li>
+                      
+                      
+                    
+                        
+                            </ul>
+                            
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+           
+       
+                <li class="no10"><b>Full Integration by Parts Formula:</b><br>
+                    \[
+                    \int uv \, dx = u \int v \, dx - \int \left( u' \int v \, dx \right) dx
+                    \]
+                
+                </li>
+         
+        <li class="no11"><b>Some Other Integral   Functions:</b>
+            <ul>
+     <img src="wrong.png" class="special" id="image-left">  
+        </ul>
+    </div>
+
+    <div class="section" id="right">
+        <h2>⚗️ Chemistry</h2>
+        <ul>
+            <p>Important Question of Class 12 Chemistry</p>
+
+            <h1>Unit Volumetric Analysis</h1>
+            <p>1.1 Define and explain the terms volumetric and gravimetric analysis.</p>
+            <p>1.2 Express the concentration of solutions in terms of percentage, g/l, molarity, molality, normality, ppm, ppb</p>
+            <p>1.3 Define and calculate the equivalent weight of (elements, acids, bases, salts, oxidising and reducing agents).</p>
+            <p>1.4 Express the concentration of solution in terms of normality.</p>
+            <p>1.5 Explain and apply the concept of law of equivalence in chemical calculation.</p>
+            <p id="scroll-point">1.6 Define and explain primary and secondary standard substance.</p>
+            <p>1.7 Explain different types of titration and their applications.</p>
+            
+            <p>(Things to study for exam)</p>
+            <p>⚫ define-end point, equivalence point, indicators, basicity of acid, acidimetry, normality, molarity. primary standard solution, secondary standard solution, alkalimetry, redox reaction, normality factor</p>
+            <p>⚫ requisites for a substance to be primary standard solution</p>
+            <p>⚫ what is the normality of 20 cc of 2M phosphoric acid (H3PO4)?</p>
+            <p>⚫How many moles of H.SO. are required to neutralize 4 liters of 2N NaOH solution? What mass of 90% pure CaCO, is required to neutralize @ liters of deci-normal solution of HCL?</p>
+            <p>⚫To convert molarity to G/L, normality, percentage.</p>
+            <p>⚫Numerical based on volumetric analysis</p>
+            
+            <h1>2. Ionic Equilibrium</h1>
+            <p>2.1 Explain the limitations of Arrhenius concepts of acids and bases.</p>
+            <p>2.2 Define Bronsted and Lowry concepts for acids and bases.</p>
+            <p>2.3 Define conjugate acids and conjugate base.</p>
+            <p>2.4 identify conjugate acid-base pairs of Bronsted acid and base.</p>
+            <p>2.5 Define and explain Lewis acids and bases.</p>
+            <p>2.6 Use the extent of ionization and dissociation constant of acid (ka) and base (kb).</p>
+            <p>2.7 Explain ionization constant of water and calculate pH and pOH in aqueous medium using Kw values.</p>
+            <p>2.8 Show understanding of, and use, the concept of solubility product sp</p>
+            <p>2.9 Calculate Ksp from concentrations and vice versa.</p>
+            <p>2.10 Show understanding of the common ion effect.</p>
+            <p>2.11 Describe the application of solubility product principle and common ion effect in precipitation reactions.</p>
+            <p>2.12 Define a Buffer and show with equations how a Buffer system works.</p>
+            <p>2.13 Explain the choice of suitable indicators for acid-base titrations and describe the changes in pH during acid-base titrations.</p>
+            <p>2.14 Define and differentiate different types of salts (simple salts, double salts, complex salt, acidic salts, basic salts and neutral salts).</p>
+            <p>2.15 Explain hydrolysis of salts (salts of strong acid and strong base, salts of weak acid and strong base and salts of weak base and strong acid).</p>
+            
+            <p>(Things to study for exam)</p>
+            <p>⚫Numerical to find PH and P^OH, ⚫Numerical related to Ksp</p>
+            
+            <h1>3. Chemical Kinetics</h1>
+            <p>3.1 Define chemical kinetics.</p>
+            <p>3.2 Explain and use the terms rate of reaction, rate equation, rate constant.</p>
+            <p>3.3 Explain qualitatively factors affecting rate of reaction.</p>
+            <p>3.4 Use collision theory to explain how the rate of chemical reaction is influenced by temperature, concentration and particle size</p>
+            <p>3.5 Explain the meaning of the term activation energy and activated complex.</p>
+            <p>3.6 Derive and explain integrated rate equation and half life for zero, and first order reaction.</p>
+            <p>3.7 Construct and use rate equations calculating an initial rate using concentration data.</p>
+            <p>3.8 Explain the significance of Arrhenius equation and solve the related problems.</p>
+            <p>3.9 Explain and use the terms catalyst and catalysis (homogenous, heterogeneous).</p>
+            <p>3.10 Describe enzyme as biological catalyst.</p>
+            <p>3.11 Explain the role of catalyst in the reaction mechanism.</p>
+            <p  >3.12 Solve related numerical problems based on rate, rate constant and order of zero and first order reactions.</p>
+            
+            <p>(Things to study for exam)</p>
+            <p>⚫Define activation energy, half life, rate of a chemical run, energy profile diagram, effective collision, ⚫factor affecting rate of ran ⚫numerical related to rate of rxn</p>
+            
+            <h1>4. Thermodynamics</h1>
+            <p>4.1 Define thermodynamics.</p>
+            <p>4.2 Explain the energy change in chemical reactions.</p>
+            <p>4.3 Define the terms internal energy and state function</p>
+            <p>4.4 State and explain first law of thermodynamics.</p>
+            <p>4.5 State and explain enthalpy and enthalpy changes in various process (enthalpy of solution, enthalpy of formation enthalpy of combustion and enthalpy of reaction).</p>
+            <p>4.6 Explain endothermic and exothermic process with the help of energy profile diagram.</p>
+            <p>4.7 State laws of thermo-chemistry and solve numerical problems related to Hess law.</p>
+            <p>4.8 Define the term entropy and spontaneity.</p>
+            <p>4.9 State and explain second law of thermodynamics.</p>
+            <p>4.10 Define standard Gibbs free energy change of see 4.11 Calculate AG for a reaction using the equn AG AH-TAS. ans of the equation AG=AH-TAS.</p>
+            <p>4.12 State whether a reaction or process will be spontaneous by using the sign of AG.</p>
+            <p>4.13 Explain the relationship between AG and equilibrium constant</p>
+            
+            <h1>5. Electrochemistry</h1>
+            <p>5.1 Define the terms: standard electrode (redox) potential.</p>
+            <p>5.2 Explain about standard hydrogen electrode and calomel electrodes.</p>
+            <p>5.3 Calculate a standard cell potential by combining two standard electrode potential.</p>
+            <p>5.4 Describe the applications of electrochemical series.</p>
+            <p>5.5 Define and explain standard cell potential with reference to voltaic cell: Zn-Cu cell, Ag-Cu cell</p>
+            <p>5.6 Use standard cell potentials to: explain/deduce the direction of electron flow in a simple cell and predict the feasibility of a reaction.</p>
+            <p>5.7 Explain the relationship between cell potential and free energy change.</p>
+            <p>5.8 State the possible advantages of developing other types of cell, eg. the hydrogen/oxygen fuel cell and lithium-ion, rechargeable batteries.</p>
+            
+            <p>(Things to study for exam)</p>
+            <p>⚫Define ECE (electrochemical equivalent), cell constant, molar conductivity, equivalent conductance, electrolytic conduction, voltaic conduction, single electrode potential, standard hydrogen electrode. ⚫Numerical based on anode cathode</p>
+            
+            <h1>6. Transition Metals</h1>
+            <p>6.1 Explain characteristics of transition metals.</p>
+            <p>6.2 Explain oxidation states of transition metals</p>
+            <p>6.3 Describe complexions and metal complexes.</p>
+            <p>6.4 Show shapes of complexions.</p>
+            <p>6.5 Describe d-orbitals in complex ions (simple explanation by crystal field theory) for octahedral complex.</p>
+            <p>6.6 Explain reasons for the colour of transition metal compounds.</p>
+            <p>6.7 Explain catalytic properties of transition metals</p>
+            
+            <h1>7. Studies of Heavy Metals</h1>
+           
+            <p>7.3 Describe properties (with air, acids, aqueous ammonia and metal ions) and uses of copper.</p>
+            <p>7.4 Explain chemistry (preparation, properties and uses) of blue vitriol.</p>
+            <p>7.5 Write formula and uses red and black oxide of copper.</p>
+            <p>7.6 Describe properties (with air, acid, alkali, displacement reaction) and uses of zinc.</p>
+            <p>7.7 Explain chemistry (preparation, properties and uses) of white vitriol.</p>
+            <p>7.8 State properties of mercury.</p>
+            <p>7.9 Explain chemistry (preparation, properties and uses) of calomel and corrosive sublimate</p>
+            <p>7.10 Explain properties and uses of iron.</p>
+            <p>7.11 Explain manufacture of steel by basic oxygen method and open hearth process.</p>
+            <p>7.12 Explain corrosion of iron and its prevention.</p>
+            <p>7.13 Explain preparation and uses of silver chloride and silver nitrate.</p>
+            
+            <h1>8. Haloalkanes</h1>
+
+<p>8.1 Describe briefly the nomenclature, isomerism and classification of monohaloalkanes</p>
+<p>Content goes here...</p>
+
+<p>8.2 Show the preparation of monohaloalkanes from alkanes, alkenes and alcohols</p>
+<p>Content goes here...</p>
+
+<p>8.3 State physical properties of monohaloalkanes</p>
+<p>Content goes here...</p>
+
+<p>8.4 Describe chemical properties of haloalkanes: substitution reactions SN1 and SN2 reactions (basic concept only)</p>
+<p>Content goes here...</p>
+
+<p>8.5 Show the formation of alcohol, nitrile, amine, ether, thioether, carbylamines, nitrite and nitro alkane using haloalkanes</p>
+<p>Content goes here...</p>
+
+<p>8.6 Describe elimination reaction (dehydrohalogenation Saytzeff's rule), Reduction reactions, Wurtz reaction</p>
+<p>Content goes here...</p>
+
+<p>8.7 Show the preparation of trichloromethane from ethanol and propanone</p>
+<p>Content goes here...</p>
+
+<p>8.8 Explain the chemical properties of trichloromethane: oxidation, reduction, action on silver powder, conc. nitric acid, propanone, and aqueous alkali</p>
+<p>Content goes here...</p>
+
+<h1>9. Haloarenes</h1>
+
+<p>9.1 Describe briefly the nomenclature and isomerism of haloarenes</p>
+<p>Content goes here...</p>
+
+<p>9.2 Show the preparation of chlorobenzene from benzene and benzene diazonium chloride</p>
+<p>Content goes here...</p>
+
+<p>9.3 State physical properties of haloarenes</p>
+<p>Content goes here...</p>
+
+<p>9.4 Describe low reactivity of haloarenes as compared to haloalkanes in term of nucleophilic substitution reaction</p>
+<p>Content goes here...</p>
+
+<p>9.5 Explain the chemical properties of haloarenes: reduction of chlorobenzene, electrophilic substitution reactions, action with Na (Fittig and Wurtz- Fittig reaction) and action with chloral</p>
+<p>Content goes here...</p>
+
+<p>9.6 Describe uses of haloarenes</p>
+<p>Content goes here...</p>
+
+<h1>10. Alcohols</h1>
+
+<p>10.1 Describe briefly the nomenclature, isomerism and classification of monohydric alcohol</p>
+<p>Content goes here...</p>
+
+<p>10.2 Distinguish primary, secondary and tertiary alcohols by Victor Meyer's Method</p>
+<p>Content goes here...</p>
+
+<p>10.3 Show the preparation of monohydric alcohols from Haloalkane, primary amines and esters</p>
+<p>Content goes here...</p>
+
+<p>10.4 Explain the industrial preparation of alcohol from: oxo process, hydroboration-oxidation of ethane & fermentation of sugar</p>
+<p>Content goes here...</p>
+
+<p>10.5 Define absolute alcohol, power alcohol, denatured alcohol (methylated spirit), rectified spirit; and alcoholic beverage</p>
+<p>Content goes here...</p>
+
+<p>10.6 State physical properties of monohydric alcohols</p>
+<p>Content goes here...</p>
+
+<p>10.7 Explain chemical properties of monohydric alcohols with HX, PX3, PCIS, and SOCIZ. Action with reactive metals like Na, K and Li, Dehydration of alcohols. Oxidation of primary, secondary and tertiary alcohol with mild oxidizing agents like acidified KMnO4 or K2Cr207. Catalytic dehydrogenation of 1° and 2° alcohol and dehydration of 3° alcohol, Esterification reaction and test of ethanol</p>
+<p>Content goes here...</p>
+
+<h1>11. Phenols</h1>
+
+<p>11.1 Describe briefly the nomenclature of phenol</p>
+<p>Content goes here...</p>
+
+<p>11.2 Show the preparation of phenol from chlorobenzene, Diazonium salt and benzene sulphonic acid</p>
+<p>Content goes here...</p>
+
+<p>11.3 State physical properties of phenol</p>
+<p>Content goes here...</p>
+
+<p>11.4 Describe acidic nature of phenol (comparison with alcohol and water)</p>
+<p>Content goes here...</p>
+
+<p>11.5 Explain the chemical properties of phenol with NH3, Zn, Na, benzene diazonium chloride and phthalic anhydride. Acylation reaction, Kolbe's reaction and Reimer-Tiemann's reaction Electrophilic substitution (nitration, sulphonation, bromination and Friedal Craft's alkylation)</p>
+<p>Content goes here...</p>
+
+<p>11.6 Describe test of phenol (FeCl3 test, aq. Bromine test & Libermann test)</p>
+<p>Content goes here...</p>
+
+<p>11.7 State important uses of phenol</p>
+<p>Content goes here...</p>
+
+<h1>12. Ethers</h1>
+
+<p>12.1 Describe briefly the nomenclature, classification and isomerism of ethers</p>
+<p>Content goes here...</p>
+
+<p>12.2 Show the preparation of aliphatic and aromatic ethers from Williamson's synthesis</p>
+<p>Content goes here...</p>
+
+<p>12.3 State physical properties of ether</p>
+<p>Content goes here...</p>
+
+<p>12.4 Explain chemical properties of ethoxyethane with HI, Conc. HCI, Conc. H2SO4, air and C12</p>
+<p>Content goes here...</p>
+
+<p>12.5 State important uses of ethers</p>
+<p>Content goes here...</p>
+
+<h1>13. Aldehydes and Ketones</h1>
+
+<h2>A) Aliphatic aldehydes and ketones</h2>
+
+<p>13.1 Describe briefly the nomenclature and isomerism of aliphatic aldehydes and ketones</p>
+<p>Content goes here...</p>
+
+<p>13.2 Show the preparation of aldehydes and ketones from dehydrogenation, oxidation of alcohol, ozonolysis of alkenes, acid chloride, gem dihaloalkane and catalytic hydration of alkynes</p>
+<p>Content goes here...</p>
+
+<p>13.3 State physical properties of aldehydes and ketones</p>
+<p>Content goes here...</p>
+
+<p>13.4 Describe structure and nature of carbonyl group</p>
+<p>Content goes here...</p>
+
+<p>13.5 Explain chemical properties of aliphatic aldehydes and ketones, ie addition of H2, HCN and NaHS03. action of aldehyde and ketone with ammonia derivatives, i.e. NH2OH, NH2-NH2, phenyl hydrazine and semicarbazide. Aldol condensation, Cannizzaro's reaction, Clemmensen's reduction and Wolf Kishner reduction. Action with PCIS and action with LAIH4 Action of methanal with ammonia and phenol</p>
+<p>Content goes here...</p>
+
+<p>13.6 Distinguish between aliphatic aldehydes and ketones by using 2,4- DNP reagent, Tollen's reagent and Fehling's solution</p>
+<p>Content goes here...</p>
+
+<p>13.7 Define formalin and state its uses</p>
+<p>Content goes here...</p>
+
+<h2>B) Aromatic aldehydes and ketones</h2>
+
+<p>13.8 Show the preparation of benzaldehyde from toluene and acetophenone from benzene</p>
+<p>Content goes here...</p>
+
+<p>13.9 Explain chemical properties of benzaldehyde, i.e. Perkin condensation, Benzoin condensation, Cannizzaro's reaction and electrophilic substitution reaction</p>
+<p>Content goes here...</p>
+
+<h1>14. Carboxylic Acid and its Derivatives</h1>
+
+<h2>A) Aliphatic and aromatic carboxylic acids</h2>
+
+<p>14.1 Describe briefly the nomenclature and isomerism of aliphatic and aromatic carboxylic acids</p>
+<p>Content goes here...</p>
+
+<p>14.2 Show the preparation of monocarboxylic acids from: aldehydes, nitriles, dicarboxylic acid, sodium alkoxide and trihaloalkanes</p>
+<p>Content goes here...</p>
+
+<p>14.3 Show the preparation of benzoic acid from alkyl benzene</p>
+<p>Content goes here...</p>
+
+<p>14.4 State physical properties of monocarboxylic acids</p>
+<p>Content goes here...</p>
+
+<p>14.5 Explain chemical properties of aliphatic and aromatic carboxylic acids: Action with alkalies, metal oxides, metal carbonates, metal bicarbonates, PC13, LIAIH4 and dehydration of carboxylic acid. Hell Volhard Zelinsky reaction. Electrophilic substitution reaction of benzoic acid (bromination, nitration and sulphonation)</p>
+<p>Content goes here...</p>
+
+<p>14.6 Explain effect of constituents on the acidic strength of carboxylic acid</p>
+<p>Content goes here...</p>
+
+<p>14.7 Describe abnormal behaviour of methanoic acid</p>
+<p>Content goes here...</p>
+
+<h2> Derivatives of Carboxylic acids (acid halides, amides, esters and anhydrides)</h2>
+
+<p>14.8 Show the preparation of acid derivatives from carboxylic acid</p>
+<p>Content goes here...</p>
+
+<p>14.9 Explain the comparative physical properties of acid derivatives</p>
+<p>Content goes here...</p>
+
+<p>14.10 Explain the comparative chemical properties of acid derivatives (hydrolysis, ammonolysis, amines RNH2), alcoholysis, and reduction only. Claisen condensation and Hofmann bromamide reaction</p>
+<p>Content goes here...</p>
+
+<p>14.11 Describe amphoteric nature of amide and relative reactivity of acid derivatives reaction</p>
+<p>Content goes here...</p>
+
+
+<h1>15. Nitro Compounds</h1>
+
+<p>15.1 Describe briefly the nomenclature and isomerism of nitro compounds</p>
+
+<p>15.2 Show the preparation from haloalkane and alkane</p>
+
+<p>15.3 State physical properties of nitro compounds</p>
+
+<p>15.4 Explain chemical properties of nitro compounds, reduction</p>
+
+<p>15.5 Show preparation of nitrobenzene from benzene</p>
+
+<p>15.6 State physical properties of nitrobenzene</p>
+
+<p>15.7 Explain chemical properties of nitrobenzene, i.e. reduction in different media and electrophilic substitution reactions (nitration, sulphonation & bromination)</p>
+
+<p>15.8 State important uses of nitro compounds</p>
+
+<h1>16. Amines</h1>
+
+<h2>(A) Aliphatic amines</h2>
+
+<p>16.1 Describe briefly the nomenclature, classification and isomerism of amines</p>
+
+<p>16.2 Show the separation of primary, secondary and tertiary amines by Hoffmann's method</p>
+
+<p>16.3 Show preparation of primary amines from haloalkane, nitriles, nitroalkanes and amides</p>
+
+<p>16.4 State physical properties of aliphatic amines</p>
+
+<p>16.5 Explain chemical properties of aliphatic amines, i.e. basicity of amines, comparative study of basic nature of 1°, 2° and 3° amines. Reaction of primary amines with chloroform, conc. HCl, R-X, RCOX and nitrous acid (NaNO2/HCl) and test of 1°, 2° and 3° amines (nitrous acid test)</p>
+
+<h2>(B) Aromatic amine (Aniline)</h2>
+
+<p>16.6 Show preparation of aniline from nitrobenzene and phenol</p>
+
+<p>16.7 State physical properties of aromatic amine</p>
+
+<p>16.8 Explain chemical properties of aromatic amine, i.e. basicity of aniline, comparison of basic nature of aniline with aliphatic amines and ammonia, alkylation, acylation, diazotization, carbylamines, coupling reaction and electrophilic substitution (Nitration, sulphonation and bromination)</p>
+
+<p>16.9 State important uses of aniline</p>
+
+<h1>17. Organometallic Compounds</h1>
+
+<p>17.1 Describe briefly the general formula and examples of organolithium, organocopper and organocadmium compounds</p>
+
+<p>17.2 Explain the nature of Metal-Carbon bond</p>
+
+<p>17.3 Define Grignard reagent</p>
+
+<p>17.4 Show the preparation Grignard reagent (using haloalkane and haloarene)</p>
+
+<p>17.5 Explain reaction of Grignard reagent with water, aldehydes and ketones (preparation of primary, secondary and tertiary alcohols), carbon dioxide, HCN, RCN, ester and acid chloride</p>
+
+<h1>18. Chemistry in the Service of Mankind</h1>
+
+<p>18.1 Explain addition and condensation polymers</p>
+
+<p>18.2 Explain elastomers and fibres</p>
+
+<p>18.3 Describe natural and synthetic polymers</p>
+
+<p>18.4 Explain some synthetic polymers (polythene, PVC, Teflon, polystyrene, nylon and bakelite)</p>
+
+<p>18.5 Explain types of dyes on the basis of structure and method of application</p>
+
+<p>18.6 Describe characteristics of drugs</p>
+
+<p>18.7 Differentiate natural and synthetic drugs</p>
+
+<p>18.8 Classify some common drugs</p>
+
+<p>18.9 Be aware of adverse effect of drug addiction</p>
+
+<p>18.10 Explain insecticides, herbicides and fungicides</p>
+
+<h1>19. Cement</h1>
+
+<p>19.1 Explain introduction and raw materials for cement production</p>
+
+<p>19.2 Give main steps in cement production (crushing and grinding, strong heating and final grinding)</p>
+
+<p>19.3 Explain OPC and PPC cement</p>
+
+<p>19.4 Explain Portland cement process with flow sheet diagram</p>
+
+<p>19.5 Explain cement Industry in Nepal</p>
+
+<h1>20. Paper and Pulp</h1>
+
+<p>20.1 Explain raw materials, sources of raw materials and stages in production of paper</p>
+
+<p>20.2 Give flow-sheet diagram for paper production</p>
+
+<p>20.3 Describe quality of paper</p>
+
+<h1>21. Nuclear Chemistry and Applications of Radioactivity</h1>
+
+<p>21.1 Describe natural and artificial radioactivity</p>
+
+<p>21.2 Give units of radioactivity</p>
+
+<p>21.3 Explain nuclear reactions</p>
+
+<p>21.4 Distinguish between nuclear fission and fusion reactions</p>
+
+<p>21.5 Describe nuclear power and nuclear weapons</p>
+
+<p>21.6 Explain industrial uses of radioactivity</p>
+
+<p>21.7 State the medical uses of radioactivity</p>
+
+<p>21.8 Explain radiocarbon dating</p>
+
+<p>21.9 Describe harmful effects of nuclear radiations</p>
+<h1>1. Name Reactions</h1>
+<ul>
+    <li>Aldol condensation reaction</li>
+    <li>Cannizaro's reaction</li>
+    <li>Perkins condensation</li>
+    <li>Claisen Condensation reaction</li>
+    <li>Benzoin condensation</li>
+    <li>Carbylamine reaction</li>
+    <li>Reimer Tiemann reaction</li>
+    <li>Coupling reaction (preparation of azo dyes)</li>
+    <li>Diazotization reaction</li>
+    <li>Friedel-Craft's reaction</li>
+    <li>Hoffmann's Bromamide reaction (Decarbonylation reaction)</li>
+    <li>Esterification reaction</li>
+    <li>Carbonylation reaction (Oxo process)</li>
+    <li>Williamsan's etherification reaction</li>
+    <li>Rosenmund reduction</li>
+</ul>
+
+<h1>2. Lab Preparation (Chemical Reaction Only) and its Chemical Properties</h1>
+<ul>
+    <li>Chloroform (trichloro methane)</li>
+    <li>Nitrobenzene</li>
+    <li>Aniline</li>
+    <li>Diethyl ether (Ethoxy ethane)</li>
+    <li>Identification of primary, secondary and tertiary alcohols by Victor Meyer's method</li>
+    <li>Separation of primary, secondary and tertiary amines by Hoffman's method</li>
+</ul>
+
+<h1>3. Test Reaction</h1>
+<ul>
+    <li>Iodoform test</li>
+    <li>Silver mirror test (reaction with Tollen's reagent)</li>
+    <li>Nitrous acid test of primary, secondary and tertiary amines</li>
+    <li>2,4-DNP test</li>
+    <li>Carbylamine test (test of primary amines)</li>
+    <li>Reduction of nitrobenzene in different medium</li>
+    <li>Preparation of alcohols using Grignard reagent</li>
+    <li>Oxidation of alcohols</li>
+    <li>Fermentation</li>
+</ul>
+
+<h1>4. Reactions to Prepare (With One Use)</h1>
+<ul>
+    <li>DDT</li>
+    <li>BHC</li>
+    <li>Chloropicrin</li>
+    <li>Picric acid</li>
+    <li>Urotropin</li>
+    <li>TNT</li>
+    <li>1-bromopropane to 2-bromopropane and vice-versa</li>
+    <li>Propanol to 2-propanol and vice versa</li>
+    <li>Methanamine to ethanamine and vice versa</li>
+    <li>Phenol to anisole (methoxy benzene) and vice versa</li>
+    <li>Ethoxy ethane to methoxy ethane</li>
+    <li>Phenol/aniline to azo-dye</li>
+    <li>Ethanal/ethanol to 3-hydroxy butanal</li>
+    <li>Ethanol to 2-hydroxy propanoic acid</li>
+    <li>Propanone (acetone) to 2-hydroxy-2-methyl propanoic acid</li>
+    <li>Phenol to toluene</li>
+    <li>Ethanol to propanol/propanoic acid</li>
+    <li>Methanamide to ethanamine</li>
+</ul>
+
+<h1>5. Short Questions</h1>
+<ul>
+    <li>Why is chloroform stored in a dark bottle containing ethanol?</li>
+    <li>Why does chloroform not give white ppt. with aq. AgNO3?</li>
+    <li>Why is nucleophilic substitution reaction difficult in haloarene?</li>
+    <li>Why is the boiling point of ethanol greater than that of ethoxy ethane?</li>
+    <li>Why is phenol more acidic than aliphatic alcohol?</li>
+    <li>Why does nitrobenzene undergo electrophilic substitution reaction at meta position? (Explain why -NO2 group is meta directing towards electrophilic aromatic substitution)</li>
+    <li>Why is chlorobenzene o/p-directing towards electrophilic substitution reaction?</li>
+    <li>It is dangerous to boil a sample of ether stored for a long time, give reason.</li>
+    <li>Ether is stored in a bottle containing iron wire, why?</li>
+    <li>Give a suitable test to distinguish ethylamine from N-methyl methanamine.</li>
+    <li>Write a chemical test to distinguish ethanoic acid (acetic acid) from methanoic acid (formic acid).</li>
+    <li>Why is chloroacetic acid stronger than acetic acid?</li>
+    <li>Why is formic acid stronger than acetic acid?</li>
+    <li>Why amino groups of aniline are protected before nitration? (Aniline can not be nitrated directly, why?)</li>
+    <li>Write the functional isomers of C3H6O with their IUPAC name. Give a chemical test to distinguish them.</li>
+    <li>Write an unsymmetrical ether of C3H8O. How would you prepare this ether using Williamson's synthesis?</li>
+    <li>Write down possible isomeric amines of C3H9N and give their IUPAC names.</li>
+    <li>What is peptide bond (linkage)? Write an example of dipeptide.</li>
+    <li>What are disaccharides? What happens when a disaccharide is hydrolysed?</li>
+    <li>Define protein. What is meant by denaturation of protein?</li>
+    <li>What is soap? How is soap obtained from fat? (What is saponification?) (What happens when a fat/oil is hydrolysed?)</li>
+    <li>Write monomers and one use of:</li>
+    <ul>
+        <li>Bakelite</li>
+        <li>Nylon-6,6</li>
+        <li>Polyvinyl chloride (PVC)</li>
+        <li>Teflon</li>
+    </ul>
+    <li>Write example and one use of:</li>
+    <ul>
+        <li>Analgesic, antipyretic, antibiotics and antiseptic drugs</li>
+        <li>Herbicide and Pesticide</li>
+        <li>Germicide and Insecticide</li>
+        <li>A synthetic fertilizer - nitrogen fertilizer/Phosphorus (phosphatic) fertilizer, mixed (NPK) fertilizer</li>
+    </ul>
+</ul>
+
+
+        <h3 style="text-align:center; margin-top:30px;">Spontaneity Table</h3>
+        <table>
+            <tr>
+                <th>ΔH</th>
+                <th>ΔS</th>
+                <th>ΔG (Spontaneity)</th>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>+</td>
+                <td>Always Spontaneous</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>-</td>
+                <td>Never Spontaneous</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>Spontaneous at Low Temp</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>+</td>
+                <td>Spontaneous at High Temp</td>
+            </tr>
+        </table>
+    </div>
+
+ 
+        <div class="section" style="width:90%;">
+            <h2>🔬 Physics</h2>
+           
+            <!-- Important Questions Section -->
+        
+            <p><b>Mechanics</b></p>
+            <p>1. Define moment of inertia and derive for thin uniform rod about center axis.</p>
+            <p>2. Derive relation between torque and angular acceleration.</p>
+            <p>3. State conservation of angular momentum and relate torque with angular momentum.</p>
+            <p>4. Show \( K.E. = \frac{1}{2} I \omega^2 \) and explain physical significance of moment of inertia.</p>
+
+            <p>5. Define SHM. Show simple pendulum bob exhibits SHM and derive time period.</p>
+            <p>6. Derive energy expression for SHM and prove energy conservation.</p>
+        
+            <p><b>Fluid Mechanics</b></p>
+            <p>1. Factors affecting capillary rise and derive \( T = \frac{h\rho g r}{2 \cos \theta} \).</p>
+
+            <p>2. Prove surface tension equals surface energy of liquid.</p>
+            <p>3. State and prove Bernoulli’s theorem.</p>
+        
+            <p><b>Heat and Thermodynamics</b></p>
+            <p>1. Define thermodynamic process. Derive adiabatic process equation.</p>
+            <p>2. Why \( C_p > C_v \)? Derive relation between them.</p>
+
+            <p>3. Describe Carnot engine with P-V diagram.</p>
+        
+            <p><b>Electricity and Magnetism</b></p>
+            <p>1. How to convert galvanometer into ammeter or voltmeter?</p>
+            <p>2. State Kirchoff's rule and use Wheatstone bridge to measure resistance.</p>
+            <p>3. State principle of meter bridge and measure resistance.</p>
+            <p>4. Explain potentiometer principle and find internal resistance of a cell.</p>
+            <p>5. Explain thermo-electric effect and variation of thermo emf.</p>
+            <p>6. State Biot-Savart's law. Find magnetic field due to straight wire, solenoid or coil.</p>
+            <p>7. State Ampere's law. Find force between two parallel current-carrying wires.</p>
+            <p>8. State Faraday's law. Derive emf induced in straight conductor moving in magnetic field.</p>
+            <p>9. State Faraday's law. Derive emf induced in rotating coil.</p>
+            <p>10. Explain principle and working of transformer.</p>
+            <p>11. Condition for resonant frequency of LCR circuit.</p>
+            <p>12. Derive impedance of LCR series circuit and show impedance-frequency graphically.</p>
+        
+            <p><b>Radioactivity</b></p>
+            <p>1. Explain why β- particle is not electron. Identify α and β particles and justify. Explain why α remains undeviated. [1+1+2+1]</p>
+            <p>2. i. State law of radioactivity. [1]</p>
+            <p>ii. Derive \( N = N_0 e^{-\lambda t} \). [3]</p>
+
+
+            <p>iii. Derive half-life relation. [2]</p>
+            <p>iv. Substance decays from 1200 Bq to 120 Bq in 10 days. Find decay constant and half-life. [2]</p>
+            <p>3. i. Define one curie. [1]</p>
+            <p>ii. Explain given decay curve and write satisfying equation. [1+1]</p>
+            <p>iii. From graph, calculate half-life and mean life. [3]</p>
+            <p>iv. Find number of decayed particles from 5 million after 300 sec. [2]</p>
+        
+            <!-- Other topics that are not moved yet -->
+        
+            <p><b>Wave Optics</b></p>
+            <p>1. What do you mean by wavefront? How can we produce plane wavefront? Use wave concept of light to prove the refraction phenomenon. [1+1+3]</p>
+            <p>2. What is wave-particle duality of light mean? State the Huygens concept of light propagation and use to prove reflection of light. [1+2+2]</p>
+            <p>3. What do you mean by coherent light? How can we produce coherent light? The phase difference of interfering wave in Young’s Double slit experiment is = 2 (), where the symbols have their usual meaning. Use it to show the fringe width of bright and dark band are same. [1+1+3]</p>
+            <p>4. What is diffraction of light? How is primary maximum produced in single slit diffraction? How wide is the central maximum peak on a screen 3m behind a 0.01 mm slit illuminated by 500 nm light source? [1+2+2]</p>
+            <p>5. Why is diffraction of light not evident in daily life however we observe sound diffraction? In single slit diffraction, the angular location of nth secondary minimum is sin = , where symbols carry their usual meaning. Find angular width of central maximum and prove central maximum has double the width of first secondary maximum. [2+3]</p>
+            <p>6. What is diffraction grating? How is grating considered as multiple slit diffraction? Find grating element if third order spectrum of 5792 Å light is at 60.3°. [1+2+2]</p>
+            <p>7. What is meant by resolving power? Describe Rayleigh criteria. Find resolving power of James Webb telescope with diameter 6.5 m and wavelength 0.6 µm. [1+2+2]</p>
+            <p>8. Light is transverse in nature, how is polarizer useful to understand it? State and explain principle shown by diagram. Find refractive index and angle of refraction if complete polarization at 55°. [3+3+2]</p>
+        
+            <p><b>Semiconductor</b></p>
+            <p>1. Identify diagram, draw output nature, explain working mechanism. What happens if another diode connected between ‘B’ and ‘L’? [1+2+2]</p>
+            <p>2. Define biasing. How is diode biased? Discuss voltage regulation. [3]</p>
+            <p>3. Define digital logic gate. Identify gate shown in diagram and explain with truth table. [1+1+3]</p>
+        
+            <p><b>Recent Trends in Physics</b></p>
+            <p>1. What is seismic wave? How do P and S waves carry energy? Why love wave more hazardous? [1+2+2]</p>
+            <p>2. What is nano-technology? Advantages over current technologies and future applications. [1+2+2]</p>
+        
+            <p><b>Modern Physics Short Questions</b></p>
+            <p>1. Millikan's oil drop experiment to find electron charge.</p>
+            <p>2. Define cross field. Explain J.J. Thomson's experiment for e/m of electron.</p>
+            <p>3. Define threshold frequency and work function. State Einstein's photoelectric equation.</p>
+            <p>4. Experiment to determine Planck's constant.</p>
+            <p>5. State Bohr's postulates. Derive radius or total energy of electron in hydrogen atom.</p>
+            <p>6. Explain Bragg's law for X-ray diffraction.</p>
+            <p>7. State radioactivity laws and derive relation between half-life and decay constant.</p>
+        </div>
+         
+    </div>
+</div>
+<div id="audio-container">
+    <audio id="background-audio" loop>
+        <source src="song1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+<footer>Best of luck for the exam !!!</footer>
+
+<script>
+    let lastClickTime = 0;
+    let clickTimes = [];
+    let songs = [
+        "song1.mp3",
+        "song2.mp3", // add more songs if you want
+        "song3.mp3",
+        "song4.mp3"
+    ];
+    let currentSongIndex = 0;
+    
+    document.body.addEventListener('click', function() {
+        var audio = document.getElementById("background-audio");
+        let now = new Date().getTime();
+        
+        // Save this click
+        clickTimes.push(now);
+    
+        // Keep only the last 3 clicks
+        if (clickTimes.length > 3) {
+            clickTimes.shift();
+        }
+    
+        // Check if 3 clicks happened within 1 second (1000 ms)
+        if (clickTimes.length === 3 && (clickTimes[2] - clickTimes[0] <= 1000)) {
+            // Change song
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            audio.src = songs[currentSongIndex];
+            audio.load();
+            audio.play();
+    
+            // Reset clicks after change
+            clickTimes = [];
+        } else {
+            // Normal pause/play toggle
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    });
+    
+    window.addEventListener('load', function() {
+    const left = document.getElementById('left');
+    const right = document.getElementById('right');
+    const image = document.getElementById('image-left');
+    const container = document.querySelector('.container');
+
+    let isRightExpanded = false;
+
+    // Function to handle scroll behavior
+    function handleScroll() {
+        const imageRect = image.getBoundingClientRect();  // Get image position on screen
+
+        // If the image is out of view, expand the right div
+        if (imageRect.bottom <= 0 && !isRightExpanded) {
+            container.classList.add('fullscreen');  // Expand right div to full width
+            isRightExpanded = true;  // Right div is expanded
+        }
+        // If the image is back in view, collapse the right div
+        else if (imageRect.bottom > 0 && isRightExpanded) {
+            container.classList.remove('fullscreen');
+            isRightExpanded = false;  // Right div is collapsed
+        }
+    }
+
+    // Trigger the handleScroll function on scroll event
+    window.addEventListener('scroll', handleScroll);
+});
+
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Prevent the default context menu
+    location.reload();  // Reload the page
+});
+</script>
+
+
+
+    </script>
+    
+
+   
+</body>
+</html>
+
